@@ -1,0 +1,177 @@
+// OOP Problem 1.cpp : This file contains the 'main' function. Program execution begins and ends there.
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+class person {
+private:
+
+    int id;
+    string name;
+
+public:
+
+    void setid(int id)
+    {
+        this->id = id;
+    }
+    void setname(string name)
+    {
+        this->name = name;
+    }
+
+////////////////////////////////////
+
+    int getid()
+    {
+        return id;
+    }
+    string getname()
+    {
+        return name;
+    }
+   
+
+};
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class player {
+
+private:
+
+    int id;
+    string name;
+    string phone;
+
+public:
+
+    void setid(int id)
+    {
+        this->id = id;
+    }
+    void setname(string name)
+    {
+        this->name = name;
+    }
+    void setphone(string phone)
+    {
+        this->phone = phone;
+    }
+///////////////////////////////////
+    int getid()
+    {
+        return id;
+    }
+    string getname()
+    {
+        return name;
+    }
+    string getphone()
+    {
+        return phone;
+    }
+    
+
+};
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class student {
+
+private:
+
+    int id;
+    string name;
+    double age;
+    string phone;
+
+public:
+
+    void setid(int id)
+    {
+        this->id = id;
+    }
+    void setname(string name)
+    {
+        this->name = name;
+    }
+    void setage(double age)
+    {
+        this->age = age;
+    }
+    void setphone(string phone)
+    {
+        this->phone = phone;
+    }
+///////////////////////////////////
+    int getid()
+    {
+        return id;
+    }
+
+    string getname()
+    {
+        return name;
+    }
+
+    double getage()
+    {
+        return age;
+    }
+
+    string getphone()
+    {
+        return phone;
+    }
+
+};
+
+
+
+
+
+int main()
+{
+    std::ios_base::sync_with_stdio(0); //fast cin , cout <3
+    cin.tie(NULL);
+
+    //sol...code
+    int id;
+    string name;
+    string phone;
+    double age;
+
+    person p;
+
+    cout << "please enter your id and name as (person)" << endl;
+    cin >> id >> name;
+    p.setid(id);
+    p.setname(name);
+
+    cout << "person info \n";
+    cout << "\n"<< p.getid() << "\t" << p.getname() << endl;
+
+    player R;
+
+    cout << "\n please enter your id , name and phone as (player)" << endl;
+    cin >> id >> name>> phone ;
+
+    R.setid(id);
+    R.setname(name);
+    R.setphone(phone);
+
+    cout << "player info \n";
+    cout << "\n"<< R.getid() << "\t" << R.getname() << "\t" << R.getphone() << endl;
+
+
+    student s;
+
+    cout << "\n please enter your id , name ,age and phone as (student)" << endl;
+    cin >> id >> name >> age >>phone;
+    s.setid(id);
+    s.setname(name);
+    s.setage(age);
+    s.setphone(phone);
+
+    cout << "student info \n";
+    cout << "\n" << s.getid() << "\t" << s.getname() << "\t" << s.getage() << "\t" << s.getphone() << endl;
+}
