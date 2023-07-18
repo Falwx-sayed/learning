@@ -1,0 +1,71 @@
+// OOP Problem 6.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include<string>
+using namespace std;
+
+class Base_entity 
+{
+private:
+    int id;
+    string name;
+public:
+    void setid(int id)
+    {
+        this->id = id;
+    }
+
+    void setname(string name)
+    {
+        this->name = name;
+    }
+
+    int getid()
+    {
+        return id;
+    }
+    string getname()
+    {
+        return name;
+    }
+};
+class public_school : public Base_entity
+{
+private:
+
+public:
+
+    
+};
+class private_school :public Base_entity
+{
+private:
+
+public:
+};
+
+int main()
+{
+    std::ios_base::sync_with_stdio(0); //fast cin , cout <3
+    cin.tie(NULL);
+
+    //sol...code
+
+    int id;
+    string name;
+    cout << "please enter you ID and name \n ";
+    cin >> id >> name;
+    public_school pu;
+    pu.setid(id);
+    pu.setname(name);
+    cout << pu.getid() << "\t" << pu.getname() << "\t" << endl;
+    
+    
+    cout << "please enter you ID and name \n ";
+    cin >> id >> name;
+    private_school pv;
+    pv.setid(id);
+    pv.setname(name);
+    cout << pv.getid() << "\t" << pv.getname() << "\t" << endl;
+}
